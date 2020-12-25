@@ -34,6 +34,24 @@ It helps me understand my application at run time.
 
 ```
 
+**Module Two**
+
+```
+
+(a) I may have a propery taking a type of a class that i had defined
+
+(b)For reusable data and so as to simplify type definitions we should create
+models.
+
+ @Output() shoppingList = new EventEmitter<Ingredient>();
+
+ Ingredient  which is an object becomes my type simplifying my work ...
+
+ @Output() shoppingList =new EventEmitter<{name:string, amount:number}>();
+
+
+```
+
 **Notes by**
 
 ```
