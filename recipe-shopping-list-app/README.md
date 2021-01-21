@@ -30,6 +30,9 @@ It is more like redux dev tools where i can be able to see the properties of all
 
 It helps me understand my application at run time.
 
+(d)Upgrading local angular version
+
+ng update @angular/cli @angular/core
 
 
 ```
