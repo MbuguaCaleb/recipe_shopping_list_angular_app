@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { Recipe } from '../../recipies.model';
+import { RecipeService } from '../../recipies.service';
 
 
 @Component({
@@ -12,14 +13,16 @@ export class RecipeItemComponent implements OnInit {
   //i may have a propery taking a type of a class that i had defined
   @Input() recipe:Recipe;
   
-  @Output()recipeSelected =new EventEmitter <void>();
 
-  constructor() { }
+  constructor(private recipeService:RecipeService) { }
 
   ngOnInit(): void {
   }
 
   onSelected(){
-    this.recipeSelected.emit();
+    /*Call method in my service*/
+    /*Once i emit from my service i can be able to listen globally across components*/
+    this.recipeService.recipeSelected.emit(this.recipe);
+    
   }
 }
