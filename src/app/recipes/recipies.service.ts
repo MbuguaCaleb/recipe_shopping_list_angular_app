@@ -3,7 +3,7 @@ import { Recipe } from "./recipies.model";
 
 
 export class RecipeService{
-
+  
     recipeSelected = new EventEmitter<Recipe>();
     
     /*We cannot access it directly when it has been set to private*/
