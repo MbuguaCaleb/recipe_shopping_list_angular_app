@@ -59,6 +59,7 @@ models.
 
 ```
 They are like global state which i can call in my application.
+Remeber that subscribe listens to an emmitted service.
 
 
 

@@ -21,8 +21,8 @@ export class ShoppingListService{
   }
 
  addIngredient(ingredient:Ingredient){
+   
       this.ingredients.push(ingredient);
-
       //here i am getting the updated copy then emmitting  it
       this.ingredientsChanged.emit(this.ingredients.slice());
  }
