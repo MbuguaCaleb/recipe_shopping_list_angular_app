@@ -1,7 +1,5 @@
 //a class is a blueprint of an object
-
 import { Ingredient } from "../shared/ingredient.model";
-
 
 export class Recipe{
     public name: string

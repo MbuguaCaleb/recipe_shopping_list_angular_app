@@ -2,7 +2,6 @@ import { Component, Input, OnInit} from '@angular/core';
 import { Recipe } from '../../recipies.model';
 import { RecipeService } from '../../recipies.service';
 
-
 @Component({
   selector: 'app-recipe-item',
   templateUrl: './recipe-item.component.html',
