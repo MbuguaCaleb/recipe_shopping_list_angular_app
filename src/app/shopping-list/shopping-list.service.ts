@@ -26,5 +26,19 @@ export class ShoppingListService{
       //here i am getting the updated copy then emmitting  it
       this.ingredientsChanged.emit(this.ingredients.slice());
  }
+
+ 
+ addIngredients(ingredients:Ingredient[]){
+  //solution one
+  // for(let ingredient of ingredients){
+  //   this.addIngredient(ingredient);
+  // }
+
+  //solution two
+  //add array to array
+  //spread  operator
+  this.ingredients.push(...ingredients);
+  this.ingredientsChanged.emit(this.ingredients.slice());
+ }
    
 }
