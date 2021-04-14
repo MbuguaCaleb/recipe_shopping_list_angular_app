@@ -1,4 +1,5 @@
 import { EventEmitter } from "@angular/core";
+import { Ingredient } from "../shared/ingredient.model";
 import { Recipe } from "./recipies.model";
 
 
@@ -9,19 +10,29 @@ export class RecipeService{
     /*We cannot access it directly when it has been set to private*/
    private recipies:Recipe[] = [
         new Recipe('Chapati',
-        'Floor ,cooking oil', 
+        'The Kenyan Favourite Meal', 
         'https://joyfoodsunshine.com/wp-content/uploads/2016/09/easy-pizza-casserole-recipe-5.jpg',
-        []),
+        [
+          new Ingredient('Floor',1),
+          new Ingredient('Cooking Oil',1)
+        ]
+        ),
         new Recipe(
-          'Second Recipe',
-        'this is a test', 
+          'Salad',
+        'Healthy Fruit Salad', 
         'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2019/06/cropped-GettyImages-643764514.jpg',
-        []),
+        [  
+          new Ingredient('Grapes',1),
+          new Ingredient('Capsicum',1)
+        ]),
         new Recipe(
-          'Third Recipe',
-          'this is a test', 
+          'Beef Sausage',
+          'Best Snack to Have', 
         'https://images.unsplash.com/photo-1551135020-39e4ca508d9b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-        []
+        [
+          new Ingredient('Beef',1),
+          new Ingredient('Olive Oil',1)
+        ]
         )
       ];
     
