@@ -10,7 +10,6 @@ import { RecipeService } from '../recipies.service';
 export class RecipeListComponent implements OnInit {
  //array holding a couple of recipe objects
  //thus the type is recipe(our custom model)
- 
 
  recipies:Recipe[];
  constructor(private recipeService:RecipeService) { }
