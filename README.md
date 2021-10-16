@@ -61,8 +61,52 @@ models.
 They are like global state which i can call in my application.
 Remeber that subscribe listens to an emmitted service.
 
+```
 
+**Custom Observables**
 
+```
+For my own custom Observables that are not
+in buult into angular i must use the OnDestroy()
+after i leave the component.
+
+This is because the Observable information by default is maintained in the state.
+
+this.router.params.subscribe((params: Params) => {
+    this.id = +params["id"];
+
+  });
+
+Router Params Subsription is an Inbuilt Observable.
+
+```
+
+**Someting More About Routing**
+
+```
+The Routes with Parameters should always come before those without parameters.
+
+Just like the wild card route should appear at the bottom Most.
+
+children: [
+  { path: "", component: RecipeStartComponent },
+  { path: "new", component: RecipeEditComponent },
+  { path: ":id", component: RecipeDetailComponent },
+  { path: ":id/edit", component: RecipeEditComponent },
+],]
+
+As we see above child route new has come before ID So that angular does not confuse the
+two.
+
+```
+
+**Naivgting Progamatically**
+
+```
+//its good practice to add relativeTo when navigating pragamatically
+   onNewRecipe() {
+    this.router.navigate(["new"], { relativeTo: this.route });
+  }
 ```
 
 **Notes by**
