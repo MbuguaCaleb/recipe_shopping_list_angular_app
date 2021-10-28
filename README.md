@@ -100,13 +100,29 @@ two.
 
 ```
 
-**Naivgting Progamatically**
+**Naivigating Progamatically**
 
 ```
 //its good practice to add relativeTo when navigating pragamatically
    onNewRecipe() {
     this.router.navigate(["new"], { relativeTo: this.route });
   }
+```
+
+**Subjects vs Event Emitters**
+
+```
+I should use Subjects instead of emitters where i am using
+eventemmitters just for cross component communiation and
+not with @output.
+
+Where i want to use @Output()->Emit a custom event, i should
+stick with event emmiter
+
+Subjects use next to send/emit new values.
+
+When it is used with @Output, It means that it is Part of a Component.
+
 ```
 
 **Notes by**
